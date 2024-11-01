@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Form</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Grocery List</h2>
+    <form id="grocery-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+            <label>Category and Items</label>
+            <div class="item-group">
+                <label>Fruits:</label><br>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Apple" data-price="30"> Apple - ₹30
+                    <input type="number" class="quantity-input" name="quantity-Apple" min="1" placeholder="Qty">
+                </div>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Banana" data-price="10"> Banana - ₹10
+                    <input type="number" class="quantity-input" name="quantity-Banana" min="1" placeholder="Qty">
+                </div>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Orange" data-price="25"> Orange - ₹25
+                    <input type="number" class="quantity-input" name="quantity-Orange" min="1" placeholder="Qty">
+                </div>
+            </div>
+            <div class="item-group">
+                <label>Vegetables:</label><br>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Carrot" data-price="20"> Carrot - ₹20
+                    <input type="number" class="quantity-input" name="quantity-Carrot" min="1" placeholder="Qty">
+                </div>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Broccoli" data-price="50"> Broccoli - ₹50
+                    <input type="number" class="quantity-input" name="quantity-Broccoli" min="1" placeholder="Qty">
+                </div>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Spinach" data-price="15"> Spinach - ₹15
+                    <input type="number" class="quantity-input" name="quantity-Spinach" min="1" placeholder="Qty">
+                </div>
+            </div>
+            <div class="item-group">
+                <label>Dairy:</label><br>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Milk" data-price="25"> Milk - ₹25
+                    <input type="number" class="quantity-input" name="quantity-Milk" min="1" placeholder="Qty">
+                </div>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Cheese" data-price="80"> Cheese - ₹80
+                    <input type="number" class="quantity-input" name="quantity-Cheese" min="1" placeholder="Qty">
+                </div>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Butter" data-price="60"> Butter - ₹60
+                    <input type="number" class="quantity-input" name="quantity-Butter" min="1" placeholder="Qty">
+                </div>
+            </div>
+            <div class="item-group">
+                <label>Grains:</label><br>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Rice" data-price="40"> Rice - ₹40
+                    <input type="number" class="quantity-input" name="quantity-Rice" min="1" placeholder="Qty">
+                </div>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Bread" data-price="30"> Bread - ₹30
+                    <input type="number" class="quantity-input" name="quantity-Bread" min="1" placeholder="Qty">
+                </div>
+                <div class="item-option">
+                    <input type="checkbox" name="items" value="Pasta" data-price="50"> Pasta - ₹50
+                    <input type="number" class="quantity-input" name="quantity-Pasta" min="1" placeholder="Qty">
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn">Add to List</button>
+    </form>
+</div>
+
+<div class="output-container" id="output-container">
+    <h3>Selected Items and Total Price</h3>
+    <div id="output"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
